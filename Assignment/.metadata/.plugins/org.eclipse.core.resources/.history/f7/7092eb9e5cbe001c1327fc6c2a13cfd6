@@ -1,0 +1,18 @@
+package statistics_test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import statistics.DataFrame;
+
+public class TestBasicTest {
+
+	@Test
+	public void test() {
+		DataFrame dataFrame = new DataFrame(2,3);
+		
+	}
+
+}

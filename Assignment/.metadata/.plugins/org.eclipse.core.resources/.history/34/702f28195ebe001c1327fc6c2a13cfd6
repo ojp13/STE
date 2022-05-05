@@ -1,0 +1,48 @@
+package statistics_test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import statistics.DataFrame;
+
+public class TestBasicTest {
+
+	@Test
+	public void test() {
+		DataFrame dataFrame = new DataFrame(4,3);
+		
+		// 1st equation
+		dataFrame.setAt(1, 1, 1.0);
+		dataFrame.setAt(2, 1, 2.0);
+		dataFrame.setAt(3, 1, 3.0);
+		dataFrame.setAt(4, 1, 4.0);
+
+		// 2nd equation
+		dataFrame.setAt(1, 2, 5.0);
+		dataFrame.setAt(2, 2, 6.0);
+		dataFrame.setAt(3, 2, 7.0);
+		dataFrame.setAt(4, 2, 8.0);
+		
+		// 3rd Equation
+		dataFrame.setAt(1, 3, 9.0);
+		dataFrame.setAt(2, 3, 10.0);
+		dataFrame.setAt(3, 3, 11.0);
+		dataFrame.setAt(4, 3, 12.0);
+		
+		dataFrame.setHeader(1, "Column 1");
+		dataFrame.setHeader(2, "Column 2");
+		dataFrame.setHeader(3, "Column 3");
+		dataFrame.setHeader(4, "Values");
+		
+		System.out.println("Original Matrix");
+		dataFrame.show();
+		
+		dataFrame.upperTriangular();
+
+		System.out.println("After upper triangulation");
+		dataFrame.show();
+	}
+
+}
